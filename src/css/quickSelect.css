@@ -1,0 +1,176 @@
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+select[data-quick-select] {
+    display: none;
+}
+.quickSelect--wrapper {
+    display: inline-block;
+    width: 192px;
+    position: relative;
+}
+.quickSelect--wrapper .button {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 8px 16px;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #282828;
+    line-height: 1.2;
+    text-align: left;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid #e6e6e6;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: background-color 300ms ease-out, border-color 300ms ease-out;
+    transition: background-color 300ms ease-out, border-color 300ms ease-out;
+}
+.quickSelect--wrapper.active .button {
+    background-color: #c2c2c2;
+    border-color: #c2c2c2;
+    color: #444;
+}
+.quickSelect--wrapper .button span {
+    display: inline-block;
+    max-width: 135px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.quickSelect--wrapper .button .button_img {
+    position: absolute;
+    right: 15px;
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+.quickSelect--wrapper.active .button .button_img {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+.quickSelect--wrapper .select_content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1020;
+    float: left;
+    width: 100%;
+    min-width: 160px;
+    padding: 10px 0;
+    margin: 8px 0 0;
+    text-align: left;
+    line-height: 1.6;
+    background-color: #fff;
+    border-color: rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    border-radius: 0;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-animation-duration: .15s;
+    animation-duration: .15s;
+}
+.quickSelect--wrapper ul.contentList {
+    padding-left: 30px;
+    margin: 0;
+    height: 370px;
+    overflow-y: scroll;
+}
+.quickSelect--wrapper ul.contentList > li p {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+    margin: 0;
+    padding: 5px 10px;
+    -webkit-transition: background-color 0.15s;
+    transition: background-color 0.15s;
+    max-width: 158px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.quickSelect--wrapper ul.contentList > li .title {
+    padding: 5px 10px;
+    background: #f2f3f6;
+    font-size: 12px;
+    color: #999;
+    font-weight: bold;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.quickSelect--wrapper ul.contentList > li p:hover, .quickSelect--wrapper ul.contentList > li p.selected {
+    color: #f60;
+    background: #f9f5f2;
+}
+.quickSelect--wrapper ul.contentList > li span {
+    display: block;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.content_link {
+    width: 17px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.content_link li {
+    display: block;
+    height: 15px;
+    margin-bottom: 2px;
+}
+.content_link li span {
+    display: inline-block;
+    vertical-align: top;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 15px;
+    color: #f60;
+    background: #fcede3;
+    border: 1px solid #f60;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.content_link li.active span {
+    background: #f60;
+    color: #fff;
+}
+
+.quickSelect--wrapper ul.contentList::-webkit-scrollbar {
+    width: 4px;
+}
+.quickSelect--wrapper ul.contentList::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 8px;
+}
+.quickSelect--wrapper ul.contentList::-webkit-scrollbar-track {
+    opacity: 1;
+    background: #fff;
+}
+.quickSelect--wrapper ul.contentList:hover::-webkit-scrollbar-thumb, .quickSelect--wrapper ul.contentList:active::-webkit-scrollbar-thumb {
+    background-color: #bebebe
+}
+.quickSelect--wrapper ul.contentList:hover::-webkit-scrollbar-track {
+    background: #e4e4e4;
+}
