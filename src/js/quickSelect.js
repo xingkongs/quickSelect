@@ -79,4 +79,4 @@
         })
     }
 })(jQuery);
-$("select[data-quick-select]").QuickSelect();
+//$("select[data-quick-select]").QuickSelect();
