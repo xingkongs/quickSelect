@@ -1,10 +1,10 @@
-#####select快速选择
+##### select快速选择
 本插件为jquery插件
 需要依赖template
 
 
 
-#####install
+##### install
 ~~~
 <select name="" id="testSelect" data-quick-select>
         <option value="104">xxx</option>
